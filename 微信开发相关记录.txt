@@ -1,0 +1,59 @@
+/*****************************************************************
+使用接口创建自定义菜单后，开发者还可使用接口查询自定义菜单的结构。
+一、请求说明
+1)http请求方式：GET
+2)https://api.weixin.qq.com/cgi-bin/menu/get?access_token=ACCESS_TOKEN
+二、返回说明
+对应创建接口，正确的Json返回结果:
+{
+	"menu":{
+		"button":[
+			{
+			"type":"click",
+			"name":"今日歌曲",
+			"key":"V1001_TODAY_MUSIC",
+			"sub_button":[]
+			},
+			{
+			"type":"click",
+			"name":"歌手简介",
+			"key":"V1001_TODAY_SINGER",
+			"sub_button":[]
+			},
+			{
+			"name":"菜单",
+			"sub_button":[{
+				"type":"view",
+				"name":"搜索",
+				"url":"http://www.soso.com/",
+				"sub_button":[]
+				},
+				{
+				"type":"view",
+				"name":"视频",
+				"url":"http://v.qq.com/",
+				"sub_button":[]
+				},
+				{
+				"type":"click",
+				"name":"赞一下我们",
+				"key":"V1001_GOOD",
+				"sub_button":[]
+			}]
+		}]
+	}
+}
+
+
+
+===================java版微信公众平台开发-文本链接网页================
+错误用法1（a标签的href属性值未被引号引起）：
+<ahref=http://www.baidu.com>百度</a>
+错误用法2（a标签的href属性值被单引号引起）：
+<ahref=‘http://www.baidu.com’>百度</a>
+正确的用法是将a标签href属性的值用双引号引起，代码如下：
+<ahref="http://www.baidu.com">百度</a>
+
+微信开发发送链接 形式 <a href="http://www.baidu.com/">百度</a> ，但是就这样添加到 <content>键值对中 消息是不会正常发送的，遇到<a就不能发送了。那么需要转义 <使用&lt;代替 >使用&gt;代替  ；
+也就是链接最终是  &lt;a href="http://www.baidu.com/"&gt;百度&lt;/a&gt;这样的形式放到<content>中。
+=========================================================================
