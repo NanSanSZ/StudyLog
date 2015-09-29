@@ -28,6 +28,7 @@ Git查看远程分支:	$ git branch -a
 Git删除远程分支：	$ git push origin --delete <branchName>
 Git查看远程分支状态：	$ git remote show origin
 
+
 **************************************************************************
 Git查看、删除、重命名远程分支和tag
 发表于 11/17/2012 作者 zrong — 6 条评论 ↓	133,613 次查看
