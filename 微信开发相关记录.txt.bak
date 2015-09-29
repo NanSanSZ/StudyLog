@@ -53,7 +53,3 @@
 <ahref=‘http://www.baidu.com’>百度</a>
 正确的用法是将a标签href属性的值用双引号引起，代码如下：
 <ahref="http://www.baidu.com">百度</a>
-
-微信开发发送链接 形式 <a href="http://www.baidu.com/">百度</a> ，但是就这样添加到 <content>键值对中 消息是不会正常发送的，遇到<a就不能发送了。那么需要转义 <使用&lt;代替 >使用&gt;代替  ；
-也就是链接最终是  &lt;a href="http://www.baidu.com/"&gt;百度&lt;/a&gt;这样的形式放到<content>中。
-=========================================================================
